@@ -4,18 +4,18 @@ namespace laboration
 {
     public class Leaderboard
     {
-        private readonly FileServiceSystem _fileServiceSystem;
-        private readonly ConsoleUI _console;
+        public readonly ResultsUpdateAndSave _resultsUpdateAndSave;
+        public readonly ConsoleIO _console;
 
-        public Leaderboard(FileServiceSystem fileServiceSystem, ConsoleUI console)
+        public Leaderboard(ResultsUpdateAndSave resultsUpdateAndSave, ConsoleIO console)
         {
-            _fileServiceSystem = fileServiceSystem;
+            _resultsUpdateAndSave = resultsUpdateAndSave;
             _console = console;
         }
 
         public void Display()
         {
-            var results = _fileServiceSystem.LoadResults();
+            var results = _resultsUpdateAndSave.LoadResults();
             results.Sort((p1, p2) => p1.AverageGuesses.CompareTo(p2.AverageGuesses));
 
             _console.WriteOutput("Player   Games   Average");

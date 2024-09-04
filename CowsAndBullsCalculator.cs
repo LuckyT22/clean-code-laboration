@@ -23,4 +23,5 @@ namespace laboration
             return $"{new string('B', bulls)},{new string('C', cows)}";
         }
     }
+    
 }

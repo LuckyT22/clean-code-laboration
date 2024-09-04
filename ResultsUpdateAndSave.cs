@@ -1,6 +1,6 @@
 ﻿namespace laboration
 {
-    public class FileServiceSystem
+    public class ResultsUpdateAndSave
     {
         private const string FilePath = "result.txt";
 

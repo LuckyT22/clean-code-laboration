@@ -1,7 +1,7 @@
 ﻿namespace laboration
 {
-    public class ConsoleUI
-    {
+    public class ConsoleIO
+    { 
         public string ReadInput(string prompt)
         {
             Console.WriteLine(prompt);
